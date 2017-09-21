@@ -14,7 +14,7 @@ and open the template in the editor.
         <?php
 echo "hi";
 echo "<br>";
-echo "hello";
+echo "Hi";
 if(!isset($_REQUEST['action']))
     $action = 'accueil';
 else
