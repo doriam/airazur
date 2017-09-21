@@ -41,8 +41,12 @@ switch($action)
 
 // vue qui crée le pied de page
 include("vues/pied.php") ;
- 
+ //test modification
+echo "hey";
 ?>
 
+        
+        
+        
     </body>
 </html>
