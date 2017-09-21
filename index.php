@@ -13,6 +13,8 @@ and open the template in the editor.
     <body>
         <?php
 echo "hi";
+echo "<br>";
+echo "hello";
 if(!isset($_REQUEST['action']))
     $action = 'accueil';
 else
@@ -43,11 +45,7 @@ switch($action)
 // vue qui crée le pied de page
 include("vues/pied.php") ;
  //test modification
-echo "hey";
-?>
 
-        
-        
-        
+?>
     </body>
 </html>
