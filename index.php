@@ -12,9 +12,6 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-echo "hi";
-echo "<br>";
-echo "emiliodoria";
 if(!isset($_REQUEST['action']))
     $action = 'accueil';
 else
