@@ -1,42 +1,27 @@
 <?php
 
-//Connection à la base de données
-function connect_db(){
-    $host="localhost";
-    $user="root";
-    $mdp="";
-    $bdd="airazur";
-
-    $mysqli= new mysqli($host, $user, $mdp, $bdd);
-
-    if ($mysqli->errno){
-        echo "Erreur de connéxion à la base de données: (".$mysqli->errno.") ".$mysqli->connect_er;
-    }
-}
-
-function getLesVols($mysqli)
+function getLesVols()
 {   
 // Déclaration d’un tableau
 $vols = array();
   // Appel au fichier permettant la connection à la BD
  require //dirname(__FILE__). // 
- "/functions.php";
+ 'Connexionbdd.php';
 
 // Selection de la base de données et requete SQL
-$sqlVols="SELECT ";
-
+$unVol="SELECT  * from   vol  ";
 
 // Remplissage d’un tableau correspondant à chaque vol
-
+$i=0;
 
  // Remplissage du tableau multi-dimensionnel $vols avec chacun des vols
-   
+   for ($r=0;$r<$i;$r++){
+       array_push($vols, $unVol[$r]);
+   }
 
 
 // Retourner le tableau
-
 return $vols;
-
 }
 
 
