@@ -1,18 +1,16 @@
 <?php
-
-function getLesVols()
-{
+require dirname(__FILE__). "\connect.php";
+function getLesVols(){
     
 // Déclaration d’un tableau
 $vols = array();
 
   // Appel au fichier permettant la connection à la BD
- require dirname(__FILE__). "\connect.php";
-    $connexion= connect();
+ $connexion= connect();
 			if ($connexion)	
 			{
   // connexion réussie
-  mysql_select_db("airazur",$connexion);
+ $bdd= mysql_select_db("airazur",$connexion);
  
 // Requete de selction des vols
  $requete= "select numVol, aeroport.libelle, aeroport.pays, aeroport2.libelle, aeroport2.pays, dateDepart, heureDepart, dateArrivee, heureArrivee, prix from vol JOIN aeroport JOIN aeroport2 where vol.idDepart=aeroport.id AND vol.idArrivee=aeroport2.idArrivee" ;
@@ -22,15 +20,15 @@ $vols = array();
   while($ligne=mysql_fetch_array($resultat))
   	{
     
-   $unVol = array();
+   $unVol = [];
 
 // Remplissage du tableau $unVol
 $i=0;
 
  // Remplissage du tableau multi-dimensionnel $vols 
-    for ($r=0;$r<$i;$r++){
-       array_push($vols, $unVol[$r]);
-   }
+    //for ($r=0;$r<$i;$r++){
+     //  array_push($vols, $unVol[$r]);
+   //}
          
         
 		}
@@ -48,6 +46,7 @@ mysql_close($connexion);
 return $vols;
 
 }
+
 print_r (getLesVols());
 /* 
  * 

@@ -20,7 +20,6 @@ $vols = array();
   $result=$connexion->query($requete);
   while($row=$result->fetch(PDO::FETCH_ASSOC)){
       $vols=$row;
-
   }
   
      return $vols;

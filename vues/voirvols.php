@@ -12,7 +12,9 @@ and open the template in the editor.
     <body>
         <?php
         // put your code here
-          echo "Page de vols";
+          echo "Page de vols <br> ";
+          echo 'hola';
+          require dirname(__FILE__).'connect.php';
         ?>
     </body>
 </html>
