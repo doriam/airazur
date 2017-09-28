@@ -12,6 +12,9 @@ and open the template in the editor.
     </head>
     <body>
         <?php
+        session_start();
+        require_once("modele/functions.php");
+        
 if(!isset($_REQUEST['action']))
     $action = 'accueil';
 else
@@ -30,6 +33,7 @@ switch($action)
   case 'voirvols':
 	  // vue qui crée le contenu de la page d’accueil
         //include("vues/entete.php");
+         $lesVols= getLesVols();
         include("vues/voirvols.php");
         break;
   case 'voireserv':
