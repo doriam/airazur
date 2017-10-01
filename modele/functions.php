@@ -4,7 +4,7 @@ require 'connect.php';
 function getLesVols()
 {
 $bdd = connect();
-   $sql = $bdd->query("select numVol, aeroport.libelle, aeroport.pays, aeroport2.libelle2, aeroport2.pays2, dateDepart, heureDepart, dateArrivee, heureArrivee, prix, nbPlaces from vol, aeroport, aeroport2 where vol.idDepart=aeroport.id AND vol.idArrivee=aeroport2.idArrivee");
+    $sql = $bdd->query("select numVol, a1.libelle as depart ,a2.libelle as arrivee, a1.pays as paysDepart ,a2.pays as paysArrivee, dateDepart, heureDepart, dateArrivee, heureArrivee, prix, nbPlaces from vol, aeroport as a1, aeroport as a2 where vol.idDepart=a1.id AND vol.idArrivee=a2.id");
        
    $vols = $sql->fetchAll() ;
    $sql->closeCursor();

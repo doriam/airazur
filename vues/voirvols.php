@@ -17,8 +17,8 @@ and open the template in the editor.
          
     foreach($lesVols as $unVol) { ?>
     Vol : <?php echo $unVol['numVol'] ;?></br>
-    Départ : <?php echo $unVol['libelle'];?> - <?php echo $unVol['pays'];?> </br>
-    Arrivée : <?php echo $unVol['libelle2'];?> - <?php echo $unVol['pays2'];?></br>
+    Départ : <?php echo $unVol['depart'];?> - <?php echo $unVol['paysDepart'];?> </br>
+    Arrivée : <?php echo $unVol['arrivee'];?> - <?php echo $unVol['paysArrivee'];?></br>
     Prix : <?php echo $unVol['prix'];?></br>
     Places : <?php echo $unVol['nbPlaces'];?></br>
     <?php echo '<a href="index.php?action=formReservation&numero='.$unVol['numVol'].'">Réserver</a></br></br>';
