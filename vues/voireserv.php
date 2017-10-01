@@ -10,9 +10,20 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <div id="contenu">
+        <form name="formReservation" action="index.php?voireserv&numVol" method="POST">
+            <label> Nom * </label>    <input type="text" name="nom" value="" /><br>
+            <label> Prenom * </label> <input type="text" name="prenom" value="" /><br>
+            <label> Adresse * </label> <input type="text" name="adresse" value="" /><br>
+            <label> Email * </label> <input type="text" name="mail" value="" /><br>
+            <label> Nombre de places * </label> <input type="text" name="nbvoyageurs" value="1" /><br><br><br>
+            
+            <input type="submit" value="Valider" />
+            <input type="submit" value="Annuler" />
+        </form>
+        </div>
         <?php
         // put your code here
-        echo "Page de reservations";
         ?>
     </body>
 </html>

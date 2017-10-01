@@ -37,8 +37,6 @@ return $vols;
 
 }
 
-$x=getLesVols();
-print_r($x);
 
 /* 
  * 

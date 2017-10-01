@@ -1,18 +1,5 @@
 <?php
 require 'connect.php';
-
-function getLesVols()
-{
-$bdd = connect();
-   $sql = $bdd->query("select numVol, aeroport.libelle, aeroport.pays, aeroport2.libelle2, aeroport2.pays2, dateDepart, heureDepart, dateArrivee, heureArrivee, prix, nbPlaces from vol, aeroport, aeroport2 where vol.idDepart=aeroport.id AND vol.idArrivee=aeroport2.idArrivee");
-       
-   $vols = $sql->fetchAll() ;
-   $sql->closeCursor();
-    
-   return ($vols);
-}
-//print_r(getLesVols());
-/*
 function getLesVols()
 {
     
@@ -44,15 +31,12 @@ else
 }
 mysql_close($connexion);
 
+
+
 return $vols;
 
 }
-*/
-//print_r (getLesVols());
-
-
 /* 
- * 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.

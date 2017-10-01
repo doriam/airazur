@@ -33,7 +33,7 @@ switch($action)
   case 'voirvols':
 	  // vue qui crée le contenu de la page d’accueil
         //include("vues/entete.php");
-         $lesVols= getLesVols();
+        $lesVols= getLesVols();
         include("vues/voirvols.php");
         break;
   case 'voireserv':
