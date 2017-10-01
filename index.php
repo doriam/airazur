@@ -14,39 +14,41 @@ and open the template in the editor.
         <?php
         session_start();
         require_once("modele/functions.php");
-        
-if(!isset($_REQUEST['action']))
-    $action = 'accueil';
-else
-    $action = $_REQUEST['action'];
+
+        if (!isset($_REQUEST['action']))
+            $action = 'accueil';
+        else
+            $action = $_REQUEST['action'];
 
 // vue qui crée l’en-tête de la page
-include("vues/entete.php") ;
+        include("vues/entete.php");
 
-switch($action)
-{
-    case 'accueil':
-	  // vue qui crée le contenu de la page d’accueil
-        //include("vues/entete.php");
-        include("vues/accueil.php");
-        break;
-  case 'voirvols':
-	  // vue qui crée le contenu de la page d’accueil
-        //include("vues/entete.php");
-         $lesVols= getLesVols();
-        include("vues/voirvols.php");
-        break;
-  case 'voireserv':
-	  // vue qui crée le contenu de la page d’accueil
-        //include("vues/entete.php");
-        include("vues/voireserv.php");
-        break;
-}
+        switch ($action) {
+            case 'accueil':
+                // vue qui crée le contenu de la page d’accueil
+                //include("vues/entete.php");
+                include("vues/accueil.php");
+                break;
+            case 'voirvols':
+                // vue qui crée le contenu de la page d’accueil
+                //include("vues/entete.php");
+                $lesVols = getLesVols();
+                include("vues/voirvols.php");
+                break;
+            case 'voireserv':
+                // vue qui crée le contenu de la page d’accueil
+                //include("vues/entete.php");
+                include("vues/voireserv.php");
+                break;
+            case 'reserver' :
+                $numero = reserverVol();
+                include("vues/v_formulaireReservation.php");
+                break;
+        }
 
 // vue qui crée le pied de page
-include("vues/pied.php") ;
- //test modification
-
-?>
+        include("vues/pied.php");
+        //test modification
+        ?>
     </body>
 </html>

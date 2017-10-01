@@ -11,6 +11,15 @@ $bdd = connect();
     
    return ($vols);
 }
+
+
+function reserverVol() {
+    // récup numéro vol
+    $numero = $_REQUEST["numero"];
+    return $numero;
+}
+
+
 //print_r(getLesVols());
 /*
 function getLesVols()
