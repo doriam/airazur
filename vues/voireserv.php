@@ -11,20 +11,23 @@ and open the template in the editor.
     </head>
     <body>
         <div id="contenu">
-        <form name="formReservation" action="index.php?validerReservation" method="POST">
-            
-            <label> Nom * </label>    <input type="text" name="nom" value="" /><br>
-            <label> Prenom * </label> <input type="text" name="prenom" value="" /><br>
-            <label> Adresse * </label> <input type="text" name="adresse" value="" /><br>
-            <label> Email * </label> <input type="text" name="mail" value="" /><br>
-            <label> Nombre de places * </label> <input type="text" name="nbvoyageurs" value="1" /><br><br><br>
-            
-            <input type="submit" value="Valider" />
-            <form method='POST' action='index.php?action=validerReservation'>
-            <input type="submit" value="Annuler" />
-            
-            <input type='hidden' value='AIR5007' name='numero'>
-        </form>
+            <fieldset>
+                <legend> Réservation du vol n° <?php echo reserverVol(); ?> </legend>
+                <form name="formReservation" action="index.php?validerReservation" method="POST">
+
+                    <label> Nom * </label>    <input type="text" name="nom" value="" /><br>
+                    <label> Prenom * </label> <input type="text" name="prenom" value="" /><br>
+                    <label> Adresse * </label> <input type="text" name="adresse" value="" /><br>
+                    <label> Email * </label> <input type="text" name="mail" value="" /><br>
+                    <label> Nombre de places * </label> <input type="text" name="nbvoyageurs" value="1" /><br><br><br>
+
+                    <input type="submit" value="Valider" />
+                    <form method='POST' action='index.php?action=validerReservation'>
+                    <input type="submit" value="Annuler" />
+
+                    <input type='hidden' value='AIR5007' name='numero'>
+                </form>
+            </fieldset>
         </div>
         <?php
         // put your code here
