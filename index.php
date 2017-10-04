@@ -38,6 +38,7 @@ and open the template in the editor.
             case 'reserver':
                 // vue qui crée le contenu de la page d’accueil
                 //include("vues/entete.php");
+                $numero= reserverVol();
                 include("vues/formulaireReservation.php");
                 break;
             //case 'voireserv' :
@@ -45,7 +46,8 @@ and open the template in the editor.
                 //include("vues/voireserv.php");
                 //break;
             case 'validerReservation':
-                include ("vues/voire");
+                $reserv= validerReservation();
+                include ("vues/confirmerReservation.php");
                 break;
         }
 

@@ -28,12 +28,13 @@ function validerReservation() {
     $reservation["nom"] = $nom;
     $prenom=$_REQUEST["prenom"];
     $reservation["prenom"] = $prenom;
-    $adresse=$_REQUEST["adresse"];
-    $reservation["adresse"] = $adresse;
     $mail=$_REQUEST["mail"];
     $reservation["mail"] = $mail;
-    $nom=$_REQUEST["nbvoyageurs"];
+    $adresse=$_REQUEST["adresse"];
+    $reservation["adresse"] = $adresse;
+    $nbvoyageurs=$_REQUEST["nbvoyageurs"];
     $reservation["nbvoyageurs"] = $nbvoyageurs;
+    return $reservation;
 }
 
 function initPanier() {
