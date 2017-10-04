@@ -37,6 +37,20 @@ function validerReservation() {
     return $reservation;
 }
 
+function creerRelations($reservation){
+    $connexion= connect();
+       if ($connexion)
+        {
+           $requete= "insert into reservation values('2','".htmlspecialchars($reservation['nom'])."','".htmlspecialchars($reservation['prenom'])."','".htmlspecialchars($reservation['mail'])."','".htmlspecialchars($reservation['adresse'])."','".$reservation['nbvoyageurs']."','".$reservation['numero']."')";
+           $connexion->query($requete);
+        }
+        else {
+            echo "Problème de connèxion";
+        }
+        
+        return $reservation;
+}
+
 function initPanier() {
 //// fonction qui initialise le panier
 // le panier est un tableau indexé mis en session avec la clé "reservations"
