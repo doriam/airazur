@@ -35,10 +35,10 @@ and open the template in the editor.
                 $lesVols = getLesVols();
                 include("vues/voirvols.php");
                 break;
-            case 'voireserv':
+            case 'reserver':
                 // vue qui crée le contenu de la page d’accueil
                 //include("vues/entete.php");
-                include("vues/voireserv.php");
+                include("vues/formulaireReservation.php");
                 break;
             //case 'voireserv' :
               //  $numero = reserverVol();

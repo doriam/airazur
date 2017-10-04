@@ -21,7 +21,7 @@ and open the template in the editor.
     Arrivée : <?php echo $unVol['arrivee'];?> - <?php echo $unVol['paysArrivee'];?></br>
     Prix : <?php echo $unVol['PRIX'];?></br>
     Places : <?php echo $unVol['NBPLACES'];?></br>
-    <?php echo '<a href="index.php?action=voireserv&numero='.$unVol['NUMVOL'].'">Réserver</a></br></br>';
+    <?php echo '<a href="index.php?action=reserver&numero='.$unVol['NUMVOL'].'">Réserver</a></br></br>';
 }
     ?>
 </div>
