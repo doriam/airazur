@@ -1,17 +1,16 @@
 <?php
+
 require 'connect.php';
 
-function getLesVols()
-{
-$bdd = connect();
+function getLesVols() {
+    $bdd = connect();
     $sql = $bdd->query("select numVol, a1.libelle as depart ,a2.libelle as arrivee, a1.pays as paysDepart ,a2.pays as paysArrivee, dateDepart, heureDepart, dateArrivee, heureArrivee, prix, nbPlaces from vol, aeroport as a1, aeroport as a2 where vol.idDepart=a1.id AND vol.idArrivee=a2.id");
-       
-   $vols = $sql->fetchAll() ;
-   $sql->closeCursor();
-    
-   return ($vols);
-}
 
+    $vols = $sql->fetchAll();
+    $sql->closeCursor();
+
+    return ($vols);
+}
 
 function reserverVol() {
     // récup numéro vol
@@ -19,6 +18,35 @@ function reserverVol() {
     return $numero;
 }
 
+function validerReservation() {
+    $reservation = array();
+    // récupération du numéro
+    $numero = $_REQUEST["numero"];
+    $reservation["numero"] = $numero;
+    // faire de même les autres paramètres…
+    $nom=$_REQUEST["nom"];
+    $reservation["nom"] = $nom;
+    $prenom=$_REQUEST["prenom"];
+    $reservation["prenom"] = $prenom;
+    $adresse=$_REQUEST["adresse"];
+    $reservation["adresse"] = $adresse;
+    $mail=$_REQUEST["mail"];
+    $reservation["mail"] = $mail;
+    $nom=$_REQUEST["nbvoyageurs"];
+    $reservation["nbvoyageurs"] = $nbvoyageurs;
+}
+
+function initPanier() {
+//// fonction qui initialise le panier
+// le panier est un tableau indexé mis en session avec la clé "reservations"
+    if (!isset($_SESSION['reservations']))
+        $_SESSION['reservations'] = array();
+}
+
+// fonction qui ajoute une réservation au panier
+function ajouterAuPanier($reservation) {
+    $_SESSION['reservations'][] = $reservation;
+}
 
 //print_r(getLesVols());
 /*

@@ -40,15 +40,17 @@ and open the template in the editor.
                 //include("vues/entete.php");
                 include("vues/voireserv.php");
                 break;
-            case 'reserver' :
-                $numero = reserverVol();
-                include("vues/v_formulaireReservation.php");
+            //case 'voireserv' :
+              //  $numero = reserverVol();
+                //include("vues/voireserv.php");
+                //break;
+            case 'validerReservation':
+                include ("vues/voire");
                 break;
         }
 
 // vue qui crée le pied de page
         include("vues/pied.php");
-        //test modification
         ?>
     </body>
 </html>
