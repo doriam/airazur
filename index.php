@@ -42,6 +42,7 @@ and open the template in the editor.
                 include("vues/formulaireReservation.php");
                 break;
             case 'voirReservations' :
+                $lesreservations=getLesReservations();
               //  $numero = reserverVol();
                 include("vues/voirReservations.php");
                 break;

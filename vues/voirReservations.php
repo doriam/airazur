@@ -1,9 +1,19 @@
+<div id="contenu">
+<label> Liste de reservations </label>
+<table border="1">
+<tr>
+  <td><strong>Nom</strong></td>
+  <td><strong>Prenom</strong></td>
+  <td><strong>Numéro de vol</strong></td>
+    <td><strong>Nb places </strong></td>
+</tr>
 <?php
-
-echo "taco";
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+if ($reservation!=null){
+    for ($i=0;$i<count($reservation)-1;$i++){
+        echo $reservation[$i];
+    }
+}
+?>
+</table>
+</div>
 

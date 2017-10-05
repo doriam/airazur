@@ -35,7 +35,8 @@ function validerReservation() {
     $nbvoyageurs=$_REQUEST["nbvoyageurs"];
     $reservation["nbvoyageurs"] = $nbvoyageurs;
     
-    
+    //initPanier();
+    //ajouterAuPanier($reservation);
     
     return $reservation;
 }
@@ -44,7 +45,7 @@ function creerReservations($reservation){
     $connexion= connect();
        if ($connexion)
         {
-           $requete= "insert into reservation values('2','".htmlspecialchars($reservation['nom'])."','".htmlspecialchars($reservation['prenom'])."','".htmlspecialchars($reservation['mail'])."','".htmlspecialchars($reservation['adresse'])."','".$reservation['nbvoyageurs']."','".$reservation['numero']."')";
+           $requete= "insert into reservation values('null','".htmlspecialchars($reservation['nom'])."','".htmlspecialchars($reservation['prenom'])."','".htmlspecialchars($reservation['mail'])."','".htmlspecialchars($reservation['adresse'])."','".$reservation['nbvoyageurs']."','".$reservation['numero']."')";
            $connexion->query($requete);
         }
         else {
@@ -66,50 +67,7 @@ function ajouterAuPanier($reservation) {
     $_SESSION['reservations'][] = $reservation;
 }
 
-//print_r(getLesVols());
-/*
-function getLesVols()
-{
-    
-// Déclaration d’un tableau
-$vols = array();
-
-  // Appel au fichier permettant la connection à la BD
-
- $connexion= connect();
-			if ($connexion)	
-			{
-                            
-  // connexion réussie
- // mysql_select_db("airazur",$connexion);
- 
-// Requete de selction des vols
- $requete= "select numVol, aeroport.libelle, aeroport.pays, aeroport2.libelle, aeroport2.pays, dateDepart, heureDepart, dateArrivee, heureArrivee, prix from vol JOIN aeroport JOIN aeroport2 where vol.idDepart=aeroport.id AND vol.idArrivee=aeroport2.idArrivee" ;
-  $result=$connexion->query($requete);
-  while($row=$result->fetch(PDO::FETCH_OBJ)){
-     
-      $vols[]=$row;
-     
-   }
-     return $vols;
-	}
-else
-{
-  echo "problème lors de la connexion <br />";
-}
-mysql_close($connexion);
-
-return $vols;
-
-}
-*/
-//print_r (getLesVols());
 
 
-/* 
- * 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//ob:obn:nbn
 
