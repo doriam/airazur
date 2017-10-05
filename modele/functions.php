@@ -34,10 +34,13 @@ function validerReservation() {
     $reservation["adresse"] = $adresse;
     $nbvoyageurs=$_REQUEST["nbvoyageurs"];
     $reservation["nbvoyageurs"] = $nbvoyageurs;
+    
+    
+    
     return $reservation;
 }
 
-function creerRelations($reservation){
+function creerReservations($reservation){
     $connexion= connect();
        if ($connexion)
         {

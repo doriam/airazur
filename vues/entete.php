@@ -12,7 +12,7 @@
         <ul id='menu'>
             <li > <a href="index.php?action=accueil"> Accueil</a></li>
             <li ><a href="index.php?action=voirvols"> Voir vols</a></li>
-            <li> <a href="index.php?action=reserver"> Voir Reservations</a></li>
+            <li> <a href="index.php?action=voirReservations"> Voir Reservations</a></li>
         </ul>
         </div>
                 <?php

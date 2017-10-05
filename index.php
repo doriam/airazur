@@ -41,13 +41,13 @@ and open the template in the editor.
                 $numero= reserverVol();
                 include("vues/formulaireReservation.php");
                 break;
-            case 'voirReservation' :
+            case 'voirReservations' :
               //  $numero = reserverVol();
-                include("vues/voirReservation.php");
+                include("vues/voirReservations.php");
                 break;
             case 'validerReservation':
                 $reservation= validerReservation();
-                
+     
                 include ("vues/confirmerReservation.php");
                 break;
         }
