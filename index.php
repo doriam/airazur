@@ -51,6 +51,11 @@ and open the template in the editor.
      
                 include ("vues/confirmerReservation.php");
                 break;
+            case 'pdfReservation':
+                $reserv= getLaReservation();
+                include ("vues/pdf_Reservation.php");
+                creerPdfReservation($reserv);
+                break;
         }
 
 // vue qui crée le pied de page

@@ -1,7 +1,7 @@
 <body>
-<div id='contenu'>
+<div id='bandeau'>
 <?php
-print_r(creerReservations($reservation));
+
 
 echo "La reservation pour le vol n° ". $reservation['numero']." est confirmée pour le client ". 
         $reservation['prenom']. " ".$reservation['nom'];

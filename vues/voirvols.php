@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <div id="contenu">
+        <div id="bandeau">
         <?php
         // put your code here
           echo "Page de vols <br> ";

@@ -35,8 +35,9 @@ function validerReservation() {
     $nbvoyageurs=$_REQUEST["nbvoyageurs"];
     $reservation["nbvoyageurs"] = $nbvoyageurs;
     
-    //initPanier();
-    //ajouterAuPanier($reservation);
+    initPanier();
+    ajouterAuPanier($reservation);
+    creerReservations($reservation);
     
     return $reservation;
 }
@@ -68,6 +69,26 @@ function ajouterAuPanier($reservation) {
 }
 
 
+function getLesReservationsPanier() {
+    if (isset($_SESSION['reservations']) && count($_SESSION['reservations'])!=0){
+        return $_SESSION['reservations'];
+    }
+    else{
+        return Null;
+    }
+    }
+    
+ function  getLesReservations () {
+        $lesReservations= getLesReservationsPanier();
+        return $lesReservations;
+ }
 
+ 
+ function getLaReservation(){
+     $numReserv=$_REQUEST['numReservation'];
+     $laReservation=$_SESSION['reservations'][$numReserv];
+     return $laReservation;
+ }
+ 
 //ob:obn:nbn
 
