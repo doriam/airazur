@@ -11,9 +11,10 @@ and open the template in the editor.
     </head>
     <body>
         <div id="bandeau">
+          <h1> VOLS DISPONIBLES </h1>
+            <div id="conteneur">          
         <?php
         // put your code here
-          echo "Page de vols <br> ";
          
     foreach($lesVols as $unVol) { ?>
     Vol : <?php echo $unVol['NUMVOL'] ;?></br>
@@ -21,10 +22,11 @@ and open the template in the editor.
     Arrivée : <?php echo $unVol['arrivee'];?> - <?php echo $unVol['paysArrivee'];?></br>
     Prix : <?php echo $unVol['PRIX']." €";?></br>
     Places : <?php echo $unVol['NBPLACES'];?></br>
-    <?php echo '<a href="index.php?action=reserver&numero='.$unVol['NUMVOL'].'">Réserver</a></br></br>';
+    <?php echo '<a href="index.php?action=reserver&numero='.$unVol['NUMVOL'].'">RESERVER</a></br></br>';
 }
     ?>
-</div>
-
+            </div>  
+            <div style="clear:both"></div>
+        </div>
     </body>
 </html>

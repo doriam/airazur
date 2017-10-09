@@ -10,7 +10,9 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <div id="contenu">
+        <div id="bandeau">
+            <h3> Confirmer reservation </h3>
+            <div id="conteneur">
             <fieldset>
                 <legend> Réservation du vol n° <?php echo $numero ?> </legend>
                 <form name="formReservation" action="index.php?action=validerReservation" method="POST">
@@ -27,6 +29,7 @@ and open the template in the editor.
                     <input type='hidden' value='<?php echo $numero ?>' name='numero'>
                 </form>
             </fieldset>
+        </div>
         </div>
         <?php
         // put your code here

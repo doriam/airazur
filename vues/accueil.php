@@ -9,10 +9,11 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body>
-        <?php
-        // put your code here
-        echo "Page d'accueil";
-        ?>
+    <body >
+            <div id="bandeau">
+                <div id="conteneurAccueil">
+                    <img src="../images/bg.jpg">
+                </div>
+            </div>
     </body>
 </html>

@@ -1,5 +1,7 @@
 <body>
 <div id='bandeau'>
+    <h3> Confirmation de la réservation </h3>
+    <div id="conteneur">
 <?php
 
 
@@ -11,5 +13,6 @@ echo "La reservation pour le vol n° ". $reservation['numero']." est confirmée 
  * and open the template in the editor.
  */
 ?>
+    </div>
 </div>
 </body>

@@ -6,7 +6,7 @@
     </head>
     <body>
         <div id="bandeau">
-            <img src="images/vols.jpg" width="25%">
+            <img src="images/avionrouge.jpg" width="20%">
         </div>
         <div id="bandeau">
         <ul id='menu'>

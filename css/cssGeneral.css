@@ -1,13 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Erica+One);
 html {
-font:normal 100%/1.2em "Trebuchet MS",Verdana,Helvetica,Arial,sans-serif;
+font:normal 100%/1.4em "Trebuchet MS",Verdana,Helvetica,Arial,sans-serif;
+ background: url(../images/fondo.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 img {border: 0 none;}
 
 
+
 fieldset {
+                padding-left:300px;
  		display:block;
- 		width:50%;
+ 		width:90%;
 		border: 1px dotted #353535;
 		padding:2px;
  		overflow:hidden;                   
@@ -45,6 +53,28 @@ input[type="submit"]
 
 #bandeau {
     padding-left:300px;
+    
+}
+#bandeau h1, h3 {
+    padding-left:250px;
+}
+
+#conteneur {
+    background: rgba(200, 54, 54, 0.5);
+    padding-top:30px;
+    border: 2px solid #CCC;
+    margin: 1em 0 1em 2em;
+    width: 600px;
+  padding-left:30px;
+  padding-bottom: 30px;
+}
+#conteneurAccueil {
+   background-image: url(../images/bg.jpg);
+   background-repeat: no-repeat;
+   border: 2px solid #CCC;
+  margin: 1em 0 1em 2em;
+  width: 600px;
+  height: 370px;
 }
 
 #menu{
@@ -64,11 +94,12 @@ height: 1.8em ;
     border: 1px solid #600 ; 
     margin-right: 1px ; 
     color: #fff ; 
-    background: #ccff11 ;
+    background: #A54444 ;
 }
 
 #menu li a , #categories li a {
-    text-decoration:none;
+    text-decoration:none; 
+    background: #A54444 ;
 }
 
 #reservations {
@@ -76,6 +107,7 @@ height: 1.8em ;
     border-style: solid;
     border-color: #666;
     border-collapse:collapse;
+    border-spacing: 10px 5px;
 }
 
 #reservations td, th {
@@ -85,6 +117,28 @@ height: 1.8em ;
     text-align: center; 
 
 }
+a:link {
+    text-decoration:none;
+    color:#F7F5F5;
+} 
+
+a:visited {
+    text-decoration:none;
+    color:#F7F5F5;
+} 
+
+
+a:active {
+    text-decoration:none;
+    color:#ff0000;
+} 
+
+
+a:hover {text-decoration:underline;
+       color:#999999;
+} 
+
+
 
 
 
