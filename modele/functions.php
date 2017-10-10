@@ -100,7 +100,7 @@ function getLesReservationsPanier() {
      return $info;
  }
  
-function supprimer (){
+function supprimer ($reserv){
 
     $id=$_REQUEST['numReservation'];
       if (isset($_SESSION['reservations'][$id])==1)
@@ -110,8 +110,11 @@ function supprimer (){
         else {
             unset($_SESSION['reservations']);
         }
+      
         $_SESSION["reservations"] = array_values($_SESSION["reservations"]);
+        
     header('location:index.php?action=voirReservations');
+     return ($vols);
 }
 
 

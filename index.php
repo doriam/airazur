@@ -52,8 +52,8 @@ and open the template in the editor.
                 creerPdfReservation($reserv);
                 break;
              case 'SupprimerReservation':
-                //$lesreservations=getLesReservations();
-                $numR= supprimer();
+                $reserv= getLaReservation();
+                $numR= supprimer($reserv);
                 //include ("vues/voirReservations.php");
                 break;
         }
