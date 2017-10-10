@@ -26,35 +26,35 @@ and open the template in the editor.
         switch ($action) {
             case 'accueil':
                 // vue qui crée le contenu de la page d’accueil
-                //include("vues/entete.php");
                 include("vues/accueil.php");
                 break;
             case 'voirvols':
                 // vue qui crée le contenu de la page d’accueil
-                //include("vues/entete.php");
                 $lesVols = getLesVols();
                 include("vues/voirvols.php");
                 break;
             case 'reserver':
                 // vue qui crée le contenu de la page d’accueil
-                //include("vues/entete.php");
                 $numero= reserverVol();
                 include("vues/formulaireReservation.php");
                 break;
             case 'voirReservations' :
                 $lesreservations=getLesReservations();
-              //  $numero = reserverVol();
                 include("vues/voirReservations.php");
                 break;
             case 'validerReservation':
                 $reservation= validerReservation();
-     
                 include ("vues/confirmerReservation.php");
                 break;
             case 'pdfReservation':
                 $reserv= getLaReservation();
                 include ("vues/pdf_Reservation.php");
                 creerPdfReservation($reserv);
+                break;
+             case 'SupprimerReservation':
+                //$lesreservations=getLesReservations();
+                $numR= supprimer();
+                //include ("vues/voirReservations.php");
                 break;
         }
 

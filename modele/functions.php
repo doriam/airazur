@@ -90,5 +90,28 @@ function getLesReservationsPanier() {
      return $laReservation;
  }
  
-//ob:obn:nbn
+ function getInfoReserv($numero){
+     $connex= connect();
+     $req="SELECT NUMVOL, a1.LIBELLE as depart, a2.LIBELLE as arrivee, a1.PAYS as paysDepart, a2.PAYS as paysArrivee, DATEDEPART, HEUREDEPART, DATEARRIVEE, HEUREARRIVEE, PRIX, NBPLACES FROM vol, aeroport as a1, aeroport as a2 where vol.ID_DEPART=a1.ID and vol.ID_ARRIVEE=a2.ID and vol.NUMVOL='$numero'";
+     $result=$connex->query($req);
+     while ($ligne=$result->fetch(PDO::FETCH_ASSOC)){
+         $info[]=$ligne;
+     }
+     return $info;
+ }
+ 
+function supprimer (){
+
+    $id=$_REQUEST['numReservation'];
+      if (isset($_SESSION['reservations'][$id])==1)
+	{
+                   unset ($_SESSION['reservations'][$id]);
+	}
+        else {
+            unset($_SESSION['reservations']);
+        }
+        $_SESSION["reservations"] = array_values($_SESSION["reservations"]);
+    header('location:index.php?action=voirReservations');
+}
+
 

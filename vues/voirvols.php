@@ -17,11 +17,11 @@ and open the template in the editor.
         // put your code here
          
     foreach($lesVols as $unVol) { ?>
-    Vol : <?php echo $unVol['NUMVOL'] ;?></br>
-    Départ : <?php echo $unVol['depart'];?> - <?php echo $unVol['paysDepart'];?> </br>
-    Arrivée : <?php echo $unVol['arrivee'];?> - <?php echo $unVol['paysArrivee'];?></br>
-    Prix : <?php echo $unVol['PRIX']." €";?></br>
-    Places : <?php echo $unVol['NBPLACES'];?></br>
+                <b> Vol : </b> <?php echo $unVol['NUMVOL'] ;?></br>
+                <b> Départ : </b> <?php echo $unVol['depart'];?> - <?php echo $unVol['paysDepart'];?> </br>
+                <b> Arrivée : </b> <?php echo $unVol['arrivee'];?> - <?php echo $unVol['paysArrivee'];?></br>
+                <b> Prix : </b> <?php echo $unVol['PRIX']." €";?></br>
+                    <b> Places :</b> <?php echo $unVol['NBPLACES'];?></br>
     <?php echo '<a href="index.php?action=reserver&numero='.$unVol['NUMVOL'].'">RESERVER</a></br></br>';
 }
     ?>

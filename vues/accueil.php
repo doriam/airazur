@@ -11,9 +11,11 @@ and open the template in the editor.
     </head>
     <body >
             <div id="bandeau">
+                <a href="index.php?action=voirvols">
                 <div id="conteneurAccueil">
                     <img src="../images/bg.jpg">
                 </div>
+                </a>
             </div>
     </body>
 </html>

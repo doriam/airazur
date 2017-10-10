@@ -12,7 +12,7 @@ $reservation->AddPage();
 $reservation->SetFont('Arial','B',16);
 
 //Ajoute une image
-$reservation->Image('images/avion1.jpg',10,10, 64, 48);
+$reservation->Image('images/avionrouge.jpg',10,10, 64, 48);
 
 
 
