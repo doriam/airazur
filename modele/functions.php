@@ -102,19 +102,26 @@ function getLesReservationsPanier() {
  
 function supprimer ($reserv){
 
-    $id=$_REQUEST['numReservation'];
+    /* $id=$_REQUEST['numReservation'];
       if (isset($_SESSION['reservations'][$id])==1)
 	{
                    unset ($_SESSION['reservations'][$id]);
 	}
-        else {
-            unset($_SESSION['reservations']);
+     * 
+     */
+    $id=$_REQUEST['numReservation'];
+    if (count($_SESSION['reservations'])!=0) 
+    {
+        
+            unset($_SESSION['reservations'][$id]);
+            
+             $_SESSION["reservations"] = array_values($_SESSION["reservations"]);
         }
       
-        $_SESSION["reservations"] = array_values($_SESSION["reservations"]);
+       
         
     header('location:index.php?action=voirReservations');
-
+    return $reserv;
 }
 
 
