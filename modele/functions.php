@@ -114,7 +114,7 @@ function supprimer ($reserv){
         $_SESSION["reservations"] = array_values($_SESSION["reservations"]);
         
     header('location:index.php?action=voirReservations');
-     return ($vols);
+
 }
 
 

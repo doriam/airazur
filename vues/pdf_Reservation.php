@@ -14,8 +14,6 @@ $reservation->SetFont('Arial','B',16);
 //Ajoute une image
 $reservation->Image('images/avionrouge.jpg',10,10, 64, 48);
 
-
-
 // affiche du texte
 $reservation->Cell(40,10,"AIR ALLIANCE");
 
@@ -42,8 +40,8 @@ $reservation->Cell(30,10,"Nombre de passagers : ".$reserv['nbvoyageurs']);
 $reservation->Output();
 }
 
-print_r($reserv);
-echo "function pdf";
+//print_r($reserv);
+//echo "function pdf";
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
